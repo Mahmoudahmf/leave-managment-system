@@ -1,0 +1,19 @@
+mat-toolbar {
+      display: flex;
+      justify-content: space-between;
+   
+    nav {
+      display: flex;
+      gap: 1rem;
+      margin-left: 2rem;
+    }
+    .spacer {
+      flex: 1 1 auto;
+    }
+    main {
+      padding: 2rem;
+    }
+    .active-link {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+ }

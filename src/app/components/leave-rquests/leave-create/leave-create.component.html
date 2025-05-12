@@ -1,0 +1,31 @@
+ <mat-card class="form-container">
+      <mat-card-header>
+        <mat-card-title>Create Leave Request</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="outline">
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="startPicker" formControlName="startDate" required>
+            <mat-datepicker-toggle matSuffix [for]="startPicker" ></mat-datepicker-toggle>
+            <mat-datepicker #startPicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>End Date</mat-label>
+            <input matInput [matDatepicker]="endPicker" formControlName="endDate" [min]="leaveForm.get('startDate')?.value " required>
+            <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+            <mat-datepicker #endPicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Reason</mat-label>
+            <textarea matInput formControlName="reason" required></textarea>
+          </mat-form-field>
+          <div class="form-actions">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!leaveForm.valid">
+              Submit Request
+            </button>
+            <button mat-button type="button" (click)="cancel()">Cancel</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>

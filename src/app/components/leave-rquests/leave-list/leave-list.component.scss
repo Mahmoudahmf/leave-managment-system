@@ -1,0 +1,26 @@
+.leave-request-container {
+      padding: 1rem;
+   
+    .filter-control {
+      margin: 1rem 0;
+      width: 200px;
+    }
+    .status-pending {
+      color: #ff9800;
+      font-weight: bold;
+    }
+    .status-approved {
+      color: #4caf50;
+      font-weight: bold;
+    }
+    .status-rejected {
+      color: #f44336;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+    }
+    mat-paginator {
+      margin-top: 1rem;
+    }
+}

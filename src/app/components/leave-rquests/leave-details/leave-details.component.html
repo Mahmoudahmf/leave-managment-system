@@ -1,0 +1,37 @@
+ <mat-card class="detail-container">
+      <mat-card-header>
+        <mat-card-title>Leave Request Details</mat-card-title>
+      </mat-card-header>
+      @if (request) {
+        <mat-card-content class="detail-content">
+            <p><strong>Employee:</strong> {{request.employeeName}}</p>
+            <p><strong>Start Date:</strong> {{request.startDate | date}}</p>
+            <p><strong>End Date:</strong> {{request.endDate | date}}</p>
+            <p><strong>Reason:</strong> {{request.reason}}</p>
+            <p><strong>Status:</strong> 
+            <span [class]="'status-' + request.status.toLowerCase()">
+                {{request.status}}
+            </span>
+            </p>
+        </mat-card-content>
+      }
+
+
+      @if ( request?.status === 'Pending') {
+        <mat-card-actions  *appHasPermission="['admin']">
+        <button mat-raised-button color="primary" (click)="updateStatus('Approved')">
+          <mat-icon>check_circle</mat-icon> Approve
+        </button>
+        <button mat-raised-button color="warn" (click)="updateStatus('Rejected')">
+          <mat-icon>cancel</mat-icon> Reject
+        </button>
+       </mat-card-actions>
+      }
+    
+      
+      <mat-card-actions>
+        <button mat-button (click)="goBack()">
+          <mat-icon>arrow_back</mat-icon> Back to List
+        </button>
+      </mat-card-actions>
+    </mat-card>

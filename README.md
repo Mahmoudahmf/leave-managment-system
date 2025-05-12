@@ -1,27 +1,42 @@
 # EmployeeLeaveApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+## Prerequisites
 
-## Development server
+- Node.js (v18+)
+- Angular CLI (v17+)
+- Git (for cloning)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## How to Clone & Run the App
 
-## Code scaffolding
+ - install Angular CLI (if missing)
+   npm install -g @angular/cli@17
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ - Clone the Repository
+   git clone https://github.com/your-repo/angular-lms.git
 
-## Build
+- Install Dependencies
+  npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Run the Development Server
+  ng serve
 
-## Running unit tests
+## How to Login
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- User Login
+![alt text](image.png)
 
-## Running end-to-end tests
+ 1- Go to /login
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+ 2- Enter:
+    Email: mahmoud@123
+    Password: mahmoud123
 
-## Further help
+- User Login
+ 1- Go to /login
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 2- Enter:
+    Email: admin@123
+    Password: admin123
+
+
+
