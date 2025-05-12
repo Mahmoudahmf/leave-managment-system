@@ -12,8 +12,7 @@
    npm install -g @angular/cli@17
 
  - Clone the Repository
-   git clone https://github.com/your-repo/angular-lms.git
-
+   git clone https://github.com/Mahmoudahmf/leave-managment-system.git
 - Install Dependencies
   npm install
 
@@ -30,7 +29,7 @@
     Email: mahmoud@123
     Password: mahmoud123
 
-- User Login
+- Admin Login
  1- Go to /login
 
  2- Enter:
