@@ -23,7 +23,6 @@
 ## How to Login
 
 - User Login
-![alt text](image.png)
 
  1- Go to /login
 
